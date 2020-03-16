@@ -1,0 +1,38 @@
+h1 {
+	font-size: 90px;
+ 	text-align: center;
+ 	color: gray;
+ 	background-color: orange;
+ 	border: 2px solid black;
+ 	margin: 10px 10px 20px 10px;
+    text-shadow: 3px 3px 1px black;	
+}
+
+p, li {
+  	font-size: 20px;
+  	line-height: 20px;
+  	letter-spacing: 2px;
+  	color: black;
+  	padding: 2px 3px 5px;
+}
+
+h2{
+  	color: red;
+  	padding: 5px 0 0 10px;
+    background-color: yellow;
+    border: 5px solid aqua;
+    margin: 0px 0px 20px 0;
+    text-shadow: red;
+}
+img{
+	display: block;
+	margin: 0 auto;
+
+}
+body {
+  width: 700px;
+  margin: 0 auto;
+  background-color: brown;
+  padding: 10px 20px 20px 20px;
+  border: 8px solid black;
+}
