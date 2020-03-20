@@ -1,0 +1,74 @@
+//1 y 2 clase
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Arrow</title>
+</head>
+<body>
+
+    <h1 id ="saludo"></h1>
+    <h1 id="suma">Resultado de la suma es: </h1>
+
+
+    <script>
+        var saludoId = document.getElementById("saludo");
+
+         // function saludar(nombre){
+         //    retunr "Hola " + nombre ; 
+         //}
+
+         var saludar = nombre => "Hola " + nombre;
+
+         saludoId.innerHTML = saludar("Cristian");
+
+         var sumaId = document.getElementById("suma");
+
+         var sumar = (num1,num2)=> num1+num2;
+         
+         sumaId.innerHTML += sumar(10,20);
+
+
+    </script>
+    
+</body>
+</html>
+
+// Objetos en JS
+var arreglo = ["Html", 17, true];
+
+console.log(arreglo[0]);
+
+var objecto = {
+    nombre: "Html",
+    duracion: "17",
+    estado: true,
+    capitulos:{
+        nombre: "Introduccion",
+        videos: 20
+    }
+
+}
+
+console.log(objecto.capitulos.nombre);
+
+//Objetos en JS
+var arrayObjetos =[ 
+    {
+        nombre:"Html",
+        estado:true
+    },
+    { 
+        nombre:"CSS",
+        estado:true
+    },
+    { 
+        nombre:"Js",
+        estado:false
+    }
+]
+
+for( let indice of arrayObjetos){
+    console.log(indice)
+}
