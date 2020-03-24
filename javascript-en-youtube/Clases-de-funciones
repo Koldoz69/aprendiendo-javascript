@@ -1,0 +1,16 @@
+IIFE (immerdiately Invoked Function Expression)
+
+((nombre = 'Ignacio')=> {
+    console.log(`suscribete a mi canal ${nombre}`);
+})('Juanito');
+
+
+(function suscribete({
+    console.log(`suscribete a mi canal`);
+})();
+
+
+function suscribete(){
+    console.log(`suscribete a mi canal!`);
+}
+suscribete();
