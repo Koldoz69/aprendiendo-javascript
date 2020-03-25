@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Buscando con IndexOf</h1>
+        <input type="text" id="formulario" class="form-control my-2">
+        <button class="btn btn-info mb-2" id="boton">Buscar</button>
+        <ul id="resultado">
+            
+        </ul>
+    </div>
+
+    <script>
+
+        const productos = [
+            {nombre: 'Platanos', valor:500},
+            {nombre: 'Pera', valor:500},
+            {nombre: 'Sandia', valor:500},
+            {nombre: 'Melon', valor:500},
+            {nombre: 'Frutillas', valor:500},
+        ]
+
+        const formulario = document.querySelector('#formulario');
+        const boton = document.querySelector('#boton');
+        const resultado = document.querySelector('#resultado')
+
+        const filtrar = ()=> {
+            //console.log(formulario.value);
+            resultado.innerHTML = '';
+
+            const texto = formulario.value.toLowerCase();
+
+            for(let producto of productos){
+                let nombre = producto.nombre.toLowerCase();
+                
+                if(nombre.indexOf(texto) !== -1){
+                    resultado.innerHTML += `
+                    <li>${producto.nombre} - Valor: ${producto.valor}</li>
+                    `
+
+
+                }
+            }
+
+            if(resultado.innerHTML === ''){
+            resultado.innerHTML += `
+            <li>Producto no encontrado...</li>
+            
+            `
+            }
+
+        }
+
+        boton.addEventListener('click', filtrar)
+        formulario.addEventListener('keyup',filtrar)
+
+        filtrar();
+
+    </script>
+    
+</body>
+</html>
