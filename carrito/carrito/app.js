@@ -110,7 +110,7 @@ function vaciarCarrito() {
     //vaciar Local Storage
     vaciarLocalStorage();
 
-    return false;
+    return false;o
 }
 
 //Almacena cursos en el carrito a local storage
